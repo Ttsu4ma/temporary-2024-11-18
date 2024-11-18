@@ -59,3 +59,10 @@
 </body>
 
 </html>
+
+document.getElementById('todo-form').onsubmit = function(event) {
+  event.preventDefault();
+  let inputForm = document.getElementById('todo-input');
+  const container = document.getElementById('uncompleted-todo-list');
+  container.innerHTML = '<div class="todo-card"> <input type="checkbox" /><span class="todo-text" data-id="96004b06-12c8-46fc-9ba5-3b4feee2cff8" contenteditable="true">'+inputForm.innerHTML+'</span><button class="delete-btn">削除</button></div>';
+};
